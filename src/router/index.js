@@ -21,6 +21,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history', //去掉路由的哈希# 处女座必备 需要协同后端 nginx
   routes
 })
 

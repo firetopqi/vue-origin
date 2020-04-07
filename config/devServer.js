@@ -1,8 +1,9 @@
-const BASEURL = process.env.BASEURL
-if (process.env.NODE_ENV === "devlopment") {
+const baseUrl = process.env.BASEURL
+if (process.env.NODE_ENV === "development") {
+  console.log(`Develop Proxy forwarding table, Proxy address: <${baseUrl}>`)
   exports.proxy = {
     "/api": {
-      target: BASEURL,
+      target: baseUrl,
       changeOrigin: true,
       ws: true,
       pathReWrithL: {
